@@ -11,12 +11,13 @@ def add():
     print(f"{num1} + {num2} is equal to {answer}.")
     print("Would you like to continue? (Y / N)")
     choice = input("> ")
-    if choice.lower() == 'y':
+    if choice.lower() == 'y' or choice.lower() == 'yes':
         add()
-    elif choice.lower() == 'n':
+    elif choice.lower() == 'n' or choice.lower() == 'no':
         math()
     else:
         print("Please enter a valid option.")
+        add()
 
 def subtract():
     print("Please choose two numbers:")
@@ -26,12 +27,13 @@ def subtract():
     print(f"{num1} - {num2} is equal to {answer}.")
     print("Would you like to continue? (Y / N)")
     choice = input("> ")
-    if choice.lower() == 'y':
+    if choice.lower() == 'y' or choice.lower() == 'yes':
         subtract()
-    elif choice.lower() == 'n':
+    elif choice.lower() == 'n' or choice.lower() == 'no':
         math()
     else:
         print("Please enter a valid option.")
+        subtract()
 
 def multiply():
     print("Please choose two numbers:")
@@ -41,28 +43,32 @@ def multiply():
     print(f"{num1} * {num2} is equal to {answer}.")
     print("Would you like to continue? (Y / N)")
     choice = input("> ")
-    if choice.lower() == 'y':
+    if choice.lower() == 'y' or choice.lower() == 'yes':
         multiply()
-    elif choice.lower() == 'n':
+    elif choice.lower() == 'n' or choice.lower() == 'no':
         math()
     else:
         print("Please enter a valid option.")
+        multiply()
 
 def divide():
-    """The division function"""
     print("Please choose two numbers:")
     num1 = input("> ")
     num2 = input("> ")
+    if num2 == '0': # You can't divide by zero
+        print("You can't have zero as a denominator!")
+        divide()
     answer = float(num1) / float(num2)  # Converting strings to floats.
-    print(f"{num1} / {num2} is equal to {answer}.")
+    print(f"{num1} / {num2} is equal to {answer:.2f}.")
     print("Would you like to continue? (Y / N)")
     choice = input("> ")
-    if choice.lower() == 'y':
+    if choice.lower() == 'y' or choice.lower() == 'yes':
         divide()
-    elif choice.lower() == 'n':
+    elif choice.lower() == 'n' or choice.lower() == 'no':
         math()
     else:
         print("Please enter a valid option.")
+        divide()
 
 def math():
     print("Please choose an option below:")
