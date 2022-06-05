@@ -4,11 +4,10 @@ def greeting():
     return name
 
 def add():
-    """The addition function"""
     print("Please choose two numbers:")
     num1 = input("> ")
     num2 = input("> ")
-    answer = int(num1) + int(num2)
+    answer = int(num1) + int(num2)  # Converting strings into integers, otherwise variables will concatenate.  # noqa: E501
     print(f"{num1} + {num2} is equal to {answer}.")
     print("Would you like to continue? (Y / N)")
     choice = input("> ")
@@ -20,11 +19,10 @@ def add():
         print("Please enter a valid option.")
 
 def subtract():
-    """The subtraction function"""
     print("Please choose two numbers:")
     num1 = input("> ")
     num2 = input("> ")
-    answer = int(num1) - int(num2)
+    answer = int(num1) - int(num2)  # Same as above
     print(f"{num1} - {num2} is equal to {answer}.")
     print("Would you like to continue? (Y / N)")
     choice = input("> ")
@@ -36,11 +34,10 @@ def subtract():
         print("Please enter a valid option.")
 
 def multiply():
-    """The multiplication function"""
     print("Please choose two numbers:")
     num1 = input("> ")
     num2 = input("> ")
-    answer = int(num1) * int(num2)
+    answer = int(num1) * int(num2)  # Same as above
     print(f"{num1} * {num2} is equal to {answer}.")
     print("Would you like to continue? (Y / N)")
     choice = input("> ")
@@ -56,8 +53,8 @@ def divide():
     print("Please choose two numbers:")
     num1 = input("> ")
     num2 = input("> ")
-    answer = float(num1) / float(num2)
-    print(f"{num1} + {num2} is equal to {answer}.")
+    answer = float(num1) / float(num2)  # Converting strings to floats.
+    print(f"{num1} / {num2} is equal to {answer}.")
     print("Would you like to continue? (Y / N)")
     choice = input("> ")
     if choice.lower() == 'y':
@@ -68,8 +65,6 @@ def divide():
         print("Please enter a valid option.")
 
 def math():
-    """The arithmetic portion of the program"""
-
     print("Please choose an option below:")
     print("*" * 30)
     print("1. Add")
