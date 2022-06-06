@@ -9,15 +9,15 @@ def add():
     num2 = input("> ")
     answer = int(num1) + int(num2)  # Converting strings into integers, otherwise variables will concatenate.  # noqa: E501
     print(f"{num1} + {num2} is equal to {answer}.")
-    print("Would you like to continue? (Y / N)")
-    choice = input("> ")
-    if choice.lower() == 'y' or choice.lower() == 'yes':
-        add()
-    elif choice.lower() == 'n' or choice.lower() == 'no':
-        math()
-    else:
-        print("Please enter a valid option.")
-        add()
+    while True:
+        print("Would you like to continue? (Y / N)")
+        choice = input("> ")
+        if choice.lower() == 'y' or choice.lower() == 'yes':
+            add()
+        elif choice.lower() == 'n' or choice.lower() == 'no':
+            math()
+        else:
+            print("Please enter a valid option.")
 
 def subtract():
     print("Please choose two numbers:")
@@ -25,15 +25,15 @@ def subtract():
     num2 = input("> ")
     answer = int(num1) - int(num2)  # Same as above
     print(f"{num1} - {num2} is equal to {answer}.")
-    print("Would you like to continue? (Y / N)")
-    choice = input("> ")
-    if choice.lower() == 'y' or choice.lower() == 'yes':
-        subtract()
-    elif choice.lower() == 'n' or choice.lower() == 'no':
-        math()
-    else:
-        print("Please enter a valid option.")
-        subtract()
+    while True:
+        print("Would you like to continue? (Y / N)")
+        choice = input("> ")
+        if choice.lower() == 'y' or choice.lower() == 'yes':
+            subtract()
+        elif choice.lower() == 'n' or choice.lower() == 'no':
+            math()
+        else:
+            print("Please enter a valid option.")
 
 def multiply():
     print("Please choose two numbers:")
@@ -41,15 +41,15 @@ def multiply():
     num2 = input("> ")
     answer = int(num1) * int(num2)  # Same as above
     print(f"{num1} * {num2} is equal to {answer}.")
-    print("Would you like to continue? (Y / N)")
-    choice = input("> ")
-    if choice.lower() == 'y' or choice.lower() == 'yes':
-        multiply()
-    elif choice.lower() == 'n' or choice.lower() == 'no':
-        math()
-    else:
-        print("Please enter a valid option.")
-        multiply()
+    while True:
+        print("Would you like to continue? (Y / N)")
+        choice = input("> ")
+        if choice.lower() == 'y' or choice.lower() == 'yes':
+            multiply()
+        elif choice.lower() == 'n' or choice.lower() == 'no':
+            math()
+        else:
+            print("Please enter a valid option.")
 
 def divide():
     print("Please choose two numbers:")
@@ -60,15 +60,15 @@ def divide():
         divide()
     answer = float(num1) / float(num2)  # Converting strings to floats.
     print(f"{num1} / {num2} is equal to {answer:.2f}.")
-    print("Would you like to continue? (Y / N)")
-    choice = input("> ")
-    if choice.lower() == 'y' or choice.lower() == 'yes':
-        divide()
-    elif choice.lower() == 'n' or choice.lower() == 'no':
-        math()
-    else:
-        print("Please enter a valid option.")
-        divide()
+    while True:
+        print("Would you like to continue? (Y / N)")
+        choice = input("> ")
+        if choice.lower() == 'y' or choice.lower() == 'yes':
+            divide()
+        elif choice.lower() == 'n' or choice.lower() == 'no':
+            math()
+        else:
+            print("Please enter a valid option.")
 
 def math():
     print("Please choose an option below:")
