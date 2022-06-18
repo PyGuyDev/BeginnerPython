@@ -12,4 +12,4 @@ def invest(initial, apr, term):
         n += 1  # Increases to the next year
 
 
-invest(100, .05, 5)
+invest(100, .05, 5) # I set the initial principle to $100 with 5% APR for a term of 5 years
